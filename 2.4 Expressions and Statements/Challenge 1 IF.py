@@ -1,6 +1,7 @@
 
 column_number = 0
 
+
 column_input = input("Please inter your column letter: ")
 if column_input.lower() == ("a" or "c" or "e" or "g"):
     column_number = 1
