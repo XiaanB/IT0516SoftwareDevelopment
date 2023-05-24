@@ -18,10 +18,10 @@ print(cm(5, 8))
 
 #3
 # import math
-# def traingle_area(b, h):
+# def triangle_area(b, h):
 #     """Return the area of a triangle with base b and height h."""
 #     return 0.5 * b * h
-# print(traingle_area(3, 6))
+# print(triangle_area(3, 6))
 
 
 # 2
