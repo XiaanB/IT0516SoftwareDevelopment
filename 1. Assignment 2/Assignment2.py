@@ -35,3 +35,4 @@ elif user_selection == 6:
 else:
     print("Thank you for using the IT help desk program.")
     exit()
+
