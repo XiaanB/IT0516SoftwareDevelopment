@@ -6,12 +6,12 @@ available_selections = ["Exit",
                         "Display ticket state"
                         ]
 
-ticket_number = 2000
-ticket_status = "Unresolved"
 choice = "-"
 ticket_details_dict = {}
+ticket_number = 2000
 
 while choice != "0":
+    ticket_status = "Unresolved"
     if choice == "1":
         ticket_number += 1
         staff_id = "ID: " + (input("Please enter your staff id."))
@@ -28,10 +28,6 @@ while choice != "0":
         more_problem = input("Do you have any other problems? Y/N")
         ticket_details_dict[ticket_number] = (staff_id, staff_name, staff_email, staff_problem, ticket_status)
         if more_problem == "N":
-            for key, values in ticket_details_dict.items():
-                print("Ticket Number:", key)
-                for i in values:
-                    print( " : ", i)
             exit()
     else:
         print("IT5014 Helpdesk Ticketing System:")
@@ -43,5 +39,9 @@ while choice != "0":
 
     choice = input("Please select an option between 0-5:\n")
 
+    # Print all tickets
     if choice == "2":
-        print(ticket_details_dict)
+        for key, values in ticket_details_dict.items():
+            print("Ticket Number:", key)
+            for i in values:
+                print(" : ", i)
