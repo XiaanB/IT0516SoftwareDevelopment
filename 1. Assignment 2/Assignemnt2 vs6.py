@@ -12,13 +12,19 @@ for number, selection in enumerate(available_selections):
     print("{0}: {1}".format(number, selection))
 print("_______________________________________________________")
 
+employee_id = ""
+employee_name = ""
+employee_email = ""
+employee_issue = ""
+ticket_status = ""
+ticket_response = ""
 
 ticket_number = 2000
 choice = "-"
-ticket_details_nested_dict = {ticket_number: {'ID': 'employee_id', 'Name': 'employee_name', 'Email': 'employee_email',
-                                              'Issue': 'employee_issue', 'Ticket status': 'ticket_status',
-                                              'Ticket response': 'ticket_response'}}
-
+ticket_details_nested_dict = {}
+# ticket_details_nested_dict = {ticket_number: {'ID': employee_id, 'Name': 'employee_name', 'Email': 'employee_email',
+#                                               'Issue': 'employee_issue', 'Ticket status': 'ticket_status',
+#                                               'Ticket response': 'ticket_response'}}
 
 while choice != "0":
     if choice == "1":
@@ -50,23 +56,34 @@ while choice != "0":
     #         print("{0}: {1}".format(number, selection))
     #     print("_______________________________________________________")
 
-    choice = input("Please select an option between 0-5:\n")
+    choice = input("\nPlease select an option between 0-5:\n")
 
     if choice == "2":
-        for key, values in ticket_details_nested_dict.items():
-            print("__________________________________________________")
-            print("Ticket Number:", key)
-            for i in values:
-                print(key, " : ", i)
+        for p_id, p_info in ticket_details_nested_dict.items():
+            print("\nTicket number:", ticket_number)
+
+            for key in p_info:
+                print(key + ':', p_info[key])
+        # for key, values in ticket_details_nested_dict.items():
+        #     print("__________________________________________________")
+        #     print("Ticket Number:", key)
+        #     for i in values:
+        #         print(" : ", i)
+        #     print(ticket_details_nested_dict.items())
 
     if choice == "3":
         ticket_number = int(input("Please enter the ticket number you wish to edit: \n"))
         keys = ticket_number
-        print(ticket_details_nested_dict[keys])
-        employee_name = "John"
+        for p_id, p_info in ticket_details_nested_dict.items():
+            print("\nTicket number:", ticket_number)
+
+            for key in p_info:
+                print(key + ':', p_info[key])
+        # print(ticket_details_nested_dict[keys])
         ticket_details_nested_dict[keys]['Name'] = employee_name
-        #ticket_details_nested_dict[ticket_number]['ticket status'] = "resolved"
-        # ticket_details_nested_dict[ticket_number]['ticket_response'] = 'input("Enter you response")'
+        ticket_details_nested_dict[keys]['Ticket status'] = "resolved"
+        user_response = input("Please enter your response: \n")
+        ticket_details_nested_dict[keys]['Ticket_response'] = user_response
         print("All done")
         print("IT5014 Helpdesk Ticketing System:")
         print("_______________________________________________________")
@@ -74,3 +91,26 @@ while choice != "0":
         for number, selection in enumerate(available_selections):
             print("{0}: {1}".format(number, selection))
         print("_______________________________________________________")
+
+    if choice == "4":
+        ticket_number = int(input("Please enter the ticket number you wish to edit: \n"))
+        keys = ticket_number
+        print(ticket_details_nested_dict[keys])
+        ticket_details_nested_dict[keys]['Name'] = employee_name
+        ticket_details_nested_dict[keys]['Ticket status'] = "Open"
+        user_response = input("Please enter your response: \n")
+        ticket_details_nested_dict[keys]['Ticket_response'] = user_response
+        print("All done")
+        print("IT5014 Helpdesk Ticketing System:")
+        print("_______________________________________________________")
+        print("Select one of the following choices: \n")
+        for number, selection in enumerate(available_selections):
+            print("{0}: {1}".format(number, selection))
+        print("_______________________________________________________")
+
+    if choice == "5":
+        for p_id, p_info in ticket_details_nested_dict.items():
+            print("\nTicket status:", ticket_status)
+
+            for key in p_info:
+                print(key + ':', p_info[key])
