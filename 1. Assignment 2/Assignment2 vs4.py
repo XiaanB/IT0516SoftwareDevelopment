@@ -59,7 +59,5 @@ while choice != "0":
                 for i in values:
                     print(" : ", i)
                 user_choice = input("Would you like to change the status? (Y?N)\n")
-                    # if user_choice == "Y":
 
-            # need to find a way to update the ticket status
 
