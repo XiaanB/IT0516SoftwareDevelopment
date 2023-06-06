@@ -86,4 +86,13 @@ while choice != "0":
                     print(" : ", i)
                 user_choice = input("Would you like to change the status? (Y?N) \n")
 
-
+    if choice == "":
+        user_selection = int(input("Please enter the ticket number you wish to see: \n"))
+        for key, values in ticket_details_dict.items():
+            print("__________________________________________________")
+            if int(key) == user_selection:
+                print("Ticket Number:", key)
+            if int(key) == user_selection:
+                for i in values:
+                    print(" : ", i)
+                user_choice = input("Would you like to change the status? (Y?N) \n")
