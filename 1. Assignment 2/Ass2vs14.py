@@ -18,14 +18,17 @@ print("_______________________________________________________")
 #User get a chance to make a selection based on the above options. No error handeling yet.
 choice = input("\nPlease select and option between 0-5:\n")
 
-#creating an empty list to store user and ticket data
+#creating an empty list to store user and ticket data. This will be a bested list.
 ticketList = []
+#From the above selections, if the user select 0 the program will terminate. Once again no error handeling, assuming the user will allways select the correct option.
 while choice != "0":
     if choice == "1":
+        #Ticket number starts at 2000
         number = 2000
         userInput = "-"
         userInput = input("Raise another ticket: (y/n) \n")
         while userInput != "-":
+            #Creating a temp list to store each ticket and user data in. This will update the nested list each time option 1 is selected.
             tempList = []
             number += 1
             employeeId = input("Enter your ID: ")
