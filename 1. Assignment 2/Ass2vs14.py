@@ -1,3 +1,5 @@
+#I have not defined any def's to optimize the code and get rid of repeating code.
+
 #Menu for selecting the optiosn on the ticket.
 available_selections = ["Exit",
                         "Submit helpdesk ticket",
@@ -82,7 +84,7 @@ while choice != "0":
                     break
 
                     #enumerating through the list and looking for the ticket number the user entered.
-                    #once found the IT user
+                    #once found the IT user can give a response and the ticket will close automatically
                 if choice == "3":
                     for (i, item) in enumerate(ticketList, start=0):
                         print(i, item)
@@ -119,7 +121,8 @@ while choice != "0":
 
                             choice = input("\nPlease select and option between 0-6:\n")
 
-
+                    #enumerating through the list and looking for the ticket number the user entered.
+                    #once found the IT user can give a response and the ticket will open automatically
                 if choice == "4":
                     openTicketsCounter = 0
                     closedTicketCounter = 0
@@ -138,7 +141,8 @@ while choice != "0":
                     print(closedTicketCounter, "\n")
                     print("tickets to be closed")
                     print((openTicketsCounter + closedTicketCounter) - openTicketsCounter)
-
+  
+                 #Enumerating over the lists and looking for the word "open"and "closed". Each time one is found it adds 1 to the appropriate variable
                 if choice == "5":
                     for (i, item) in enumerate(ticketList, start=0):
                         print(i, item)
