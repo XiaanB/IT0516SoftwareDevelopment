@@ -1,11 +1,12 @@
+#Menu for selecting the optiosn on the ticket.
 available_selections = ["Exit",
                         "Submit helpdesk ticket",
                         "Show all tickets",
                         "Respond to ticket by number",
                         "Ticket stats",
                         "Re-open resolved ticket",
-                        "Display ticket state"
                         ]
+#Printing a nice welcome sreen for the user to make a selection
 print("IT5014 Helpdesk Ticketing System:")
 print("_______________________________________________________")
 print("Select one of the following choices: \n")
@@ -14,7 +15,8 @@ for number, selection in enumerate(available_selections):
     print("{0}: {1}".format(number, selection))
 print("_______________________________________________________")
 
-choice = input("\nPlease select and option between 0-6:\n")
+#User get a chance to make a selection based on the above options. No error handeling yet.
+choice = input("\nPlease select and option between 0-5:\n")
 
 ticketList = []
 while choice != "0":
