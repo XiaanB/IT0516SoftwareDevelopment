@@ -18,6 +18,7 @@ print("_______________________________________________________")
 #User get a chance to make a selection based on the above options. No error handeling yet.
 choice = input("\nPlease select and option between 0-5:\n")
 
+#creating an empty list to store user and ticket data
 ticketList = []
 while choice != "0":
     if choice == "1":
