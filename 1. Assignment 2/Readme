@@ -5,10 +5,10 @@ vs4 - dict
 vs5 - nested list
 vs6 - dict
 vs7 - Class with def's. Two lists
-
-
-
-
-
-
-
+vs8 - Class with def's. Two lists
+vs9 - disct with a list as value
+vs10- disct with a list as value
+vs11 - nested list
+vs12- list
+vs13 - nested list
+vs14- nested list being populated by a temp list.
