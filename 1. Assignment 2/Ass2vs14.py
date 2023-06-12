@@ -47,7 +47,8 @@ while choice != "0":
             tempList.append(employeeIssue)
             tempList.append(ticketStatus)
             tempList.append(ticketResponse)
-
+            
+            #OPtion to generate a new password and to change the ticket status and ticker response
             if employeeIssue == "password change":
                 passwordUserId = (employeeId[0:2])
                 passwordUserName = (employeeName[0:3])
@@ -56,7 +57,8 @@ while choice != "0":
                 tempList[6] = "Closed"
                 tempList[7] = "New password generated"
             ticketList.append(tempList)
-            #userInput = input("Raise another ticket: (y/n/-) \n")
+            # if (y) the option 1 is repeated and a new ticket with a new number is created. No error handleing yet.
+            userInput = input("Raise another ticket: (y/n/-) \n")
             if userInput == "n":
                 print("IT5014 Helpdesk Ticketing System:")
                 print("_______________________________________________________")
@@ -68,6 +70,7 @@ while choice != "0":
 
                 choice = input("\nPlease select and option between 0-6:\n")
 
+                #Looping throught the nested list and printing
                 if choice == "2":
                     for r in ticketList:
                         print("Ticket Number: ")
@@ -78,6 +81,8 @@ while choice != "0":
                 if choice == "0":
                     break
 
+                    #enumerating through the list and looking for the ticket number the user entered.
+                    #once found the IT user
                 if choice == "3":
                     for (i, item) in enumerate(ticketList, start=0):
                         print(i, item)
