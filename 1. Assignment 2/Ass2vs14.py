@@ -1,11 +1,14 @@
+#I have not defined any def's to optimize the code and get rid of repeating code.
+
+#Menu for selecting the optiosn on the ticket.
 available_selections = ["Exit",
                         "Submit helpdesk ticket",
                         "Show all tickets",
                         "Respond to ticket by number",
                         "Ticket stats",
                         "Re-open resolved ticket",
-                        "Display ticket state"
                         ]
+#Printing a nice welcome sreen for the user to make a selection
 print("IT5014 Helpdesk Ticketing System:")
 print("_______________________________________________________")
 print("Select one of the following choices: \n")
@@ -14,15 +17,20 @@ for number, selection in enumerate(available_selections):
     print("{0}: {1}".format(number, selection))
 print("_______________________________________________________")
 
-choice = input("\nPlease select and option between 0-6:\n")
+#User get a chance to make a selection based on the above options. No error handeling yet.
+choice = input("\nPlease select and option between 0-5:\n")
 
+#creating an empty list to store user and ticket data. This will be a bested list.
 ticketList = []
+#From the above selections, if the user select 0 the program will terminate. Once again no error handeling, assuming the user will allways select the correct option.
 while choice != "0":
     if choice == "1":
+        #Ticket number starts at 2000
         number = 2000
         userInput = "-"
         userInput = input("Raise another ticket: (y/n) \n")
         while userInput != "-":
+            #Creating a temp list to store each ticket and user data in. This will update the nested list each time option 1 is selected.
             tempList = []
             number += 1
             employeeId = input("Enter your ID: ")
@@ -41,7 +49,8 @@ while choice != "0":
             tempList.append(employeeIssue)
             tempList.append(ticketStatus)
             tempList.append(ticketResponse)
-
+            
+            #OPtion to generate a new password and to change the ticket status and ticker response
             if employeeIssue == "password change":
                 passwordUserId = (employeeId[0:2])
                 passwordUserName = (employeeName[0:3])
@@ -50,7 +59,8 @@ while choice != "0":
                 tempList[6] = "Closed"
                 tempList[7] = "New password generated"
             ticketList.append(tempList)
-            #userInput = input("Raise another ticket: (y/n/-) \n")
+            # if (y) the option 1 is repeated and a new ticket with a new number is created. No error handleing yet.
+            userInput = input("Raise another ticket: (y/n/-) \n")
             if userInput == "n":
                 print("IT5014 Helpdesk Ticketing System:")
                 print("_______________________________________________________")
@@ -62,6 +72,7 @@ while choice != "0":
 
                 choice = input("\nPlease select and option between 0-6:\n")
 
+                #Looping throught the nested list and printing
                 if choice == "2":
                     for r in ticketList:
                         print("Ticket Number: ")
@@ -72,6 +83,8 @@ while choice != "0":
                 if choice == "0":
                     break
 
+                    #enumerating through the list and looking for the ticket number the user entered.
+                    #once found the IT user can give a response and the ticket will close automatically
                 if choice == "3":
                     for (i, item) in enumerate(ticketList, start=0):
                         print(i, item)
@@ -108,7 +121,8 @@ while choice != "0":
 
                             choice = input("\nPlease select and option between 0-6:\n")
 
-
+                    #enumerating through the list and looking for the ticket number the user entered.
+                    #once found the IT user can give a response and the ticket will open automatically
                 if choice == "4":
                     openTicketsCounter = 0
                     closedTicketCounter = 0
@@ -127,7 +141,8 @@ while choice != "0":
                     print(closedTicketCounter, "\n")
                     print("tickets to be closed")
                     print((openTicketsCounter + closedTicketCounter) - openTicketsCounter)
-
+  
+                 #Enumerating over the lists and looking for the word "open"and "closed". Each time one is found it adds 1 to the appropriate variable
                 if choice == "5":
                     for (i, item) in enumerate(ticketList, start=0):
                         print(i, item)
