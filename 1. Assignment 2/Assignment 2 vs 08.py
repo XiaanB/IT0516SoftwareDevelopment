@@ -14,13 +14,9 @@ class Ticket:
         # ticket_number += 1
 
         user_id = input("Please enter your ID:")
-
-    #ticket_list.append(Ticket(ticket_number, userId, 'cbb', 'gtgfgsdfg', 'hard',
-
-                              'none', 'open'))
-
-    #print(ticket_list[ticket_number].ticketNumber)
-
+        #ticket_list.append(Ticket(ticket_number, userId, 'cbb', 'gtgfgsdfg', 'hard',
+        #                          'none', 'open'))
+        #print(ticket_list[ticket_number].ticketNumber)
 
 available_selections = ["Exit",
 

@@ -1,10 +1,15 @@
 
+def search(ticket_number):
+    for i in range(ticket_list.__len__()):
+        if ticket_list[i].number == ticket_number:
+            return i
 
 
 # Create class "Student"
 class Ticket:
     # Initial ticket number
     ticket_count = 2000
+
     def __init__(self, ticket_number, user_id, first_name, last_name, email_address, description_of_the_issue,
                  ticket_status, it_response):
         self.number = ticket_number
@@ -22,11 +27,6 @@ class Ticket:
         ob = Ticket(number, user_id, first_name, last_name, email_address, description_of_the_issue, status,
                     it_response)
         ticket_list.append(ob)
-
-    def search(self, ticket_number):
-        for i in range(ticket_list.__len__()):
-            if ticket_list[i].number == ticket_number:
-                return i
 
     # Function to display student details
     def display(self, ob):
@@ -92,14 +92,15 @@ while True:
 
     elif user_selection == 3:
         search_number = int(input("Enter the ticket number to search for: "))
-        s = obj.search(search_number)
+        s = search(search_number)
         obj.display(ticket_list[s])
 
     elif user_selection == 4:
         search_number_update = int(input("Enter the ticket number to close: "))
-        s = obj.search(search_number_update)
+        s = search(search_number_update)
         ticket_list[s].status = "Closed"
         ticket_list[s].it_response = input("Please enter a reason: ")
+
         obj.display(ticket_list[s])
 
     elif user_selection == 5:
@@ -127,9 +128,10 @@ while True:
 
     elif user_selection == 6:
         search_number_update = int(input("Enter the ticket number to re-open: "))
-        s = obj.search(search_number_update)
+        s = search(search_number_update)
         ticket_list[s].status = "Reopened"
         ticket_list[s].it_response = input("Please provide a reason for opening this ticket: \n")
+
         obj.display(ticket_list[s])
 
     elif user_selection == 7:

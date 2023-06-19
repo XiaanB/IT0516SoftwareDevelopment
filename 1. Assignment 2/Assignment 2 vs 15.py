@@ -18,9 +18,9 @@ class UserDetails:
 
 
 
-def change_password():
-     # OPtion to generate a new password and to change the ticket status and ticker response
-    # if UserDetails(description_of_problem=) == "password change":
+# def change_password():
+    #   Option to generate a new password and to change the ticket status and ticker response
+    #   if UserDetails(description_of_problem=) == "password change":
     #     passwordUserId = UserDetails(user_id=)[0:2]
     #     passwordUserName = UserDetails([0:3])
     #     password = passwordUserId + passwordUserName
