@@ -1,0 +1,38 @@
+This is the screen that will greet you once you start the program. It will
+pop up every time a selection has been completed until Option 7 (Exit) is
+selected and the program terminates.
+
+Option 1 -- Enter ticket details
+Option 2 -- Display all tickets
+Option 3 -- Search tickets
+Option 4 -- It response and close ticket
+Option 5 -- Ticket stats
+Option 6 -- Open closed ticket
+Option 7 -- Exit
+
+1. Allways start at option 1 to add a couple of tickets. While adding tickets,
+   try to add "password change" to the Description of issue. It is not case
+   sensitive.
+
+2. Select option 2 to view all tickets. This print all the current tickets.
+   At any stage of the program option 2 can be selected and it will display
+   all the tickets.
+
+3. Use option 3 if you have the ticket number and would like to display the
+   ticket.
+
+4. Select option 3 to modify a ticket. Enter the ticket number you want ot
+   modify and give a reason why you are modifying it. This will allso close
+   the ticket.
+
+5. This will display STATS of all tickets. The amount of ticket created,
+   the amount of open and closed tickets as well as the amount of re-opened
+   tickets.
+
+6. This will allow for a closed ticket to be re-opened. It will update the
+   to Re-opened and the response will be updated as well. The new response
+   will be added to the original response.
+
+7. This will exit the program.
+
+The options can be used in any order as long as you have enter a ticket in.

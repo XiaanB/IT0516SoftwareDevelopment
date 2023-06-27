@@ -4,8 +4,6 @@
     <checkstyleVersion>10.3</checkstyleVersion>
     <scanScope>JavaOnly</scanScope>
     <copyLibs>true</copyLibs>
-    <option name="thirdPartyClasspath" />
-    <option name="activeLocationIds" />
     <option name="locations">
       <list>
         <ConfigurationLocation id="33582952-8321-4424-9f38-d4175fb3aa3e" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
