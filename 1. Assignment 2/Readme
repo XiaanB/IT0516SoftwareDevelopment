@@ -21,7 +21,8 @@ vs17- list being populated by an ticket object created from a class.
       Adding some error handling.
 vs18- list being populated by an ticket object created from a class.
       Optimizing code and deleting redundant code.
-
+vs19- Adding more methods and cleaning up repeated code. Adding handling of user input.
+vs20- Trying to add the main code to a main class.
 
 
 

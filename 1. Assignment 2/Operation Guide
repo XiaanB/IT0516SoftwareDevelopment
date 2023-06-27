@@ -1,6 +1,7 @@
 This is the screen that will greet you once you start the program. It will
 pop up every time a selection has been completed until Option 7 (Exit) is
-selected and the program terminates.
+selected and the program terminates. There is error handling that will only allow for a selection of 1 - 7
+and will tell the user that he has entered an invalid number or letter.
 
 Option 1 -- Enter ticket details
 Option 2 -- Display all tickets
@@ -10,27 +11,36 @@ Option 5 -- Ticket stats
 Option 6 -- Open closed ticket
 Option 7 -- Exit
 
-1. Allways start at option 1 to add a couple of tickets. While adding tickets,
+1. Always start at option 1 to add a couple of tickets. While adding tickets,
    try to add "password change" to the Description of issue. It is not case
-   sensitive.
+   sensitive.  The user ID can be any combination of numbers or letters.
+   The user name and last name has to be more than 3 letters, not an empty string.
+   The user needs to enter a valid email address or he will get a message to try again.
+   The problem can not be an empty string.
 
-2. Select option 2 to view all tickets. This print all the current tickets.
+
+2. Select option 2 to view all tickets. This prints all the current tickets.
    At any stage of the program option 2 can be selected and it will display
    all the tickets.
 
 3. Use option 3 if you have the ticket number and would like to display the
-   ticket.
+   Ticket. The user must enter a valid ticket number. If a float or a string is entered the user will
+   get a message to try again. If the ticket number entered is not in the ticket list he will get a
+   message accordingly.
 
-4. Select option 3 to modify a ticket. Enter the ticket number you want ot
-   modify and give a reason why you are modifying it. This will allso close
+4. Select option 4 to modify a ticket. Enter the ticket number you want to
+   modify and give a reason why you are modifying it. This will also close
    the ticket.
 
 5. This will display STATS of all tickets. The amount of ticket created,
    the amount of open and closed tickets as well as the amount of re-opened
-   tickets.
+   Tickets.in Ass 2 vs 19 I have created a ticket counter variable for Open/Closed tickets.
+   Everytime the user modifies a ticket it will add/subtract 1 from the counter. In vs 18 I created a
+   loop that goes through the ticket list and adds 1 to the Open/Closed variable. This will also calculate the
+   percentages. I have included both in the current version.
 
 6. This will allow for a closed ticket to be re-opened. It will update the
-   to Re-opened and the response will be updated as well. The new response
+   to re-opened and the response will be updated as well. The new response
    will be added to the original response.
 
 7. This will exit the program.
