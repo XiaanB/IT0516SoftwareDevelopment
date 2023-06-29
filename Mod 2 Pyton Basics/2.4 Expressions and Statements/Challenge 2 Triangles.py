@@ -1,3 +1,4 @@
+# Calculating the type of trianlge with the user porviding the lenth of the sides
 side_a = int(input("Please enter the length of side a: "))
 side_b = int(input("Please enter the length of side b: "))
 side_c = int(input("Please enter the length of sode c: "))
