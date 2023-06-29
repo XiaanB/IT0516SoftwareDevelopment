@@ -1,11 +1,9 @@
-
+# Calculating and printing the colour of the square.
 column_number = 0
-
 
 column_input = input("Please inter your column letter: ")
 if column_input.lower() == ("a" or "c" or "e" or "g"):
     column_number = 1
-
 
 row_input = int(input("Please enter your row number: "))
 coordinate_ref = column_number + row_input
