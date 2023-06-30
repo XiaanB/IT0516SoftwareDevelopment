@@ -1,9 +1,11 @@
+# Creating a list called computer_parts
 computer_parts = ["computer",
                   "monitor",
                   "keyboard",
                   "mouse mat"
                   ]
 
+# Looping through the list and printing it each time
 for part in computer_parts:
     print(part)
 
