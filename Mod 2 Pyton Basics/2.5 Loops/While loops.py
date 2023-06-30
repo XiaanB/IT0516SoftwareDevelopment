@@ -11,6 +11,8 @@
 #               "try again")
 # x = input("Press any key to exit")
 
+
+# Doing the same loop, but limiting the tries to 3 
 number_of_tries = 3
 
 while True:
@@ -20,8 +22,10 @@ while True:
         break
     else:
         print("Sorry, try again")
+        # Reducing the variable number of tries by one each time.
         number_of_tries -= 1
         print("You have ", number_of_tries, "tries left")
+    
     if number_of_tries == 0:
         print("You have ran out of tries")
         break
