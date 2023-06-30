@@ -1,0 +1,6 @@
+def show_hello():
+    print("Hello there, this is my first function...\n\n")
+
+
+show_hello()
+show_hello()
