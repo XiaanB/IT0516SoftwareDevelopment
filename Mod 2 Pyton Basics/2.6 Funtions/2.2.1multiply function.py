@@ -3,7 +3,7 @@
 # to be and integer number.
 num = int(input(print("Can you please enter a number>")))
 
-# Confirming bacck to the user the numnber they have entered.
+# Confirming back to the user the numnber they have entered.
 print("Your number is ", num)
 
 # Creating a function with an argument
