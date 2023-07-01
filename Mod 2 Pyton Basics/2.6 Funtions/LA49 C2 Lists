@@ -1,0 +1,22 @@
+# creating the original list
+og_list = [5, 10, 15, 20, 25] 
+
+# creating a funtion witch takes a list as an argument
+def new_list_first_last(original_list):
+    # Creating a list to hold the new list
+    first_last_list = []
+    
+    #first = og_list[0]
+    #last = og_list[-1]
+    
+    # Appending to the new list the first and last values of the 
+    # original list
+    first_last_list.append(og_list[0])
+    first_last_list.append(og_list[-1])
+    #first_last_list.append(first)     
+    #first_last_list.append(last)
+    print(first_last_list)    
+    
+
+# Calling the function and giving the original list as the argumant.
+new_list_first_last(og_list)
