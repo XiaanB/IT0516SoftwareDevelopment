@@ -12,10 +12,6 @@ print(cm(inches = 70))
 print(cm(5, 8))
 
 
-
-
-
-
 #3
 # import math
 # def triangle_area(b, h):
