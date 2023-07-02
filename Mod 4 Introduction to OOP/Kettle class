@@ -7,6 +7,10 @@ print(a.__add__(b))
 
 # Creating  Kettle class with attributes
 class Kettle(object):
+    
+    # Class attribute
+    power_source = "Electricity"
+    
     def __init__(self, make, price):
         self.make = make
         self.price = price
@@ -34,6 +38,7 @@ print("Models: {0.make} = {0.price}, {0.make} = {0.make}".format(kenwood, hamilt
 # Using the on function to turn the kettle on.
 print(hamilton.on)
 hamilton.switch_on()
+print(hamilton.on)
 
 # Calling the method of the class
 Kettle.switch_on(kenwood)
@@ -44,3 +49,11 @@ print("*" * 80)
 kenwood.power = 1.5
 print(kenwood.power)
 # print(hamilton.power)
+
+print(Kettle.power_source)
+print(kenwood.power_source)
+print(hamilton.power_source)
+
+print(Kettle.__dict__)
+print(kenwood.__dict__)
+print(hamilton.__dict__)
